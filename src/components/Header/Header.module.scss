@@ -1,0 +1,30 @@
+header{
+    .logo{
+        font-weight: 600;
+        font-size: 26px;
+    }
+    .presentation{
+        margin: 50px 0;
+        background: url(./../../assets/logo3.webp) no-repeat;
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center center;
+        //background-blend-mode: multiply;
+        //background-color: rgb(255, 255, 255);
+        position: relative;
+
+    }
+
+    .presentation::after{
+        content: "Надежные IP телефоны для Вашего бизнеса!";
+        color: rgb(255, 255, 255);
+        position: absolute;
+        font-family: 'Courier New', Courier, monospace;
+        top: 430px;
+        left: 10px;
+        width: 100%;
+        font-size: 60px;
+    }
+
+}
