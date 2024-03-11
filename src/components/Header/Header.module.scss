@@ -3,27 +3,49 @@ header{
         font-weight: 600;
         font-size: 26px;
     }
+
+    .nav{
+        float: right;
+        list-style: none;
+
+        li{
+            display: inline;
+            margin-left: 25px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            transition: opacity 500ms ease;
+        }
+
+        li:hover{
+            opacity: 0.8;
+            color: rgb(250, 247, 54);
+        }
+    }
+
     .presentation{
         margin: 50px 0;
-        background: url(./../../assets/logo3.webp) no-repeat;
+        background: url(./../../assets/logo123.jpg) no-repeat;
         width: 100%;
         height: 500px;
+        font-weight: 600;
         background-size: cover;
         background-position: center center;
         //background-blend-mode: multiply;
-        //background-color: rgb(255, 255, 255);
+        //background-color: rgb(201, 0, 0);
         position: relative;
+        border-radius: 15px;
 
     }
 
     .presentation::after{
         content: "Надежные IP телефоны для Вашего бизнеса!";
-        color: rgb(255, 255, 255);
+        color: rgb(83, 153, 245);
         position: absolute;
         font-family: 'Courier New', Courier, monospace;
-        top: 430px;
+        top: 0px;
         left: 10px;
-        width: 100%;
+        width: 50%;
         font-size: 60px;
     }
 
