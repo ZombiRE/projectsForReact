@@ -1,4 +1,7 @@
 header{
+    position: relative;
+
+
     .logo{
         font-weight: 600;
         font-size: 26px;
@@ -23,6 +26,37 @@ header{
         }
     }
 
+    .shopCartButtom{
+        float: right;
+        cursor: pointer;
+        transition: 1s ease;
+        font-size: 20px;
+        transition: 1s;
+    
+        &:hover,
+        &.active {
+            color: red !important;
+            transform: scale(1.3);
+        }
+    }
+    
+    .shopCart{
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 450px;
+        min-height: 100px;
+        
+        background: rgba(34, 60, 80, 0.8);
+        -webkit-box-shadow: -36px 39px 20px 10px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: -36px 39px 20px 10px rgba(34, 60, 80, 0.2);
+        box-shadow: -36px 39px 20px 10px rgba(34, 60, 80, 0.2);
+        z-index: 1000;
+        
+        
+
+    }
+
     .presentation{
         margin: 50px 0;
         background: url(./../../assets/logo123.jpg) no-repeat;
@@ -36,17 +70,29 @@ header{
         position: relative;
         border-radius: 15px;
 
+        &::after {
+            content: "Надежные IP телефоны для Вашего бизнеса!";
+            color: rgb(158, 24, 24);
+            position: absolute;
+            font-family: 'Courier New', Courier, monospace;
+            top: 0px;
+            left: 10px;
+            width: 50%;
+            font-size: 60px;
+        }
+
+        &::before {
+            content: 'по низкой цене';
+            color: antiquewhite;
+            position: absolute;
+            top: 260px;
+            right: 20px;
+            width: 350px;
+            font-size: 35px;
+        }
+
     }
 
-    .presentation::after{
-        content: "Надежные IP телефоны для Вашего бизнеса!";
-        color: rgb(83, 153, 245);
-        position: absolute;
-        font-family: 'Courier New', Courier, monospace;
-        top: 0px;
-        left: 10px;
-        width: 50%;
-        font-size: 60px;
-    }
+    
 
 }
