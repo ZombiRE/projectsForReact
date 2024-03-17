@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Items from "./components/Items"
 import Footer from "./components/Footer"
 import "./index.scss"
+import Orders from "./components/Orders"
 
 export default function App() {
 
@@ -109,17 +110,23 @@ export default function App() {
     }
 
   ]);
+  const [orders, setOrders] = useState([]);
 
-  const [orders,setOrders]=useState({});
-  const addToOrder=(item)=>{
-    if(!orders.some((el)=>el.id===item.id)){
-      setOrders([...orders,item]);
-    }
+  const deleteOrder=(id)=>{
+    setOrders(orders.filter((el)=>el.id!==id));
   }
+
+  const addToOrder = (item) => {
+    if (!orders.some((el) => el.id === item.id)) {
+      setOrders([...orders, item]);
+    }//добавление товара много раз оставлям только setOrders([...orders,item]), без проверки
+  }
+  
+  
   
   return (
     <div className="wrapper">
-    <Header orders={orders}/>
+    <Header orders={orders} onDelete={deleteOrder}/>
     <Items allItems={items} onAdd={addToOrder}/>
     <Footer />
     </div>
